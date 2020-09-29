@@ -13,9 +13,11 @@ public class Window extends JFrame {
 		searchPage = new SearchPage(this);
 		this.setTitle(title);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setMinimumSize(new Dimension(1024, 576));
+		this.setMinimumSize(new Dimension(1280, 720));
 		this.setMaximumSize(new Dimension(1920, 1080));
 		this.setPreferredSize(new Dimension(1280, 720));
+		
+		this.setLocationRelativeTo(null);
 		
 		this.add(searchPage);
 	
