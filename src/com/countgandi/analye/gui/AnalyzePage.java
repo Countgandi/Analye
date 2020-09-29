@@ -1,11 +1,11 @@
 package com.countgandi.analye.gui;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Field;
@@ -164,9 +164,30 @@ public class AnalyzePage extends JFrame {
 			redPanel.add(p2);
 		}
 		
-		JPanel centerPanel = new JPanel();
+		JPanel centerPanel = new JPanel(new GridLayout(1, 2));
+		JPanel bluep = new JPanel();
+		bluep.setLayout(new BoxLayout(bluep, BoxLayout.Y_AXIS));
+		JPanel redp = new JPanel();
+		redp.setLayout(new BoxLayout(redp, BoxLayout.Y_AXIS));
+		bluep.setBackground(Globals.BLUE);
+		redp.setBackground(Globals.RED);
 		
-		teamStatsPanel.add();
+		JLabel win = new JLabel("Victory");
+		JLabel fail = new JLabel("Defeat");
+		win.setFont(new Font(Globals.FONT, Font.PLAIN, 24));
+		fail.setFont(new Font(Globals.FONT, Font.PLAIN, 24));
+		if(alighnmentb.equals("West")) {
+			bluep.add(win);
+			redp.add(fail);
+			centerPanel.add(bluep);
+			centerPanel.add(redp);
+		} else {
+			redp.add(win);
+			bluep.add(fail);
+			centerPanel.add(redp);
+			centerPanel.add(bluep);
+		}
+		
 		
 		teamStatsPanel.add(centerPanel);
 		

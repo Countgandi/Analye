@@ -18,20 +18,4 @@ public class Match {
 	public int mapId;
 	public String gameMode;
 	
-	// blue = true
-	@NameAnnotation(name = "Win", space = true)
-	public boolean win;
-	@NameAnnotation(name = "First Blood")
-	public boolean firstBlood;
-	@NameAnnotation(name = "First Tower")
-	public boolean firstTower;
-	@NameAnnotation(name = "First Inhibitor")
-	public boolean firstInhibitor;
-	@NameAnnotation(name = "First Rift Herald")
-	public boolean firstRiftHerald;
-	@NameAnnotation(name = "First Dragon")
-	public boolean firstDragon;
-	@NameAnnotation(name = "First Baron", space = true)
-	public boolean firstBaron;
-	
 }

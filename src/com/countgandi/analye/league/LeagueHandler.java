@@ -53,27 +53,18 @@ public class LeagueHandler {
 			stat.dragonKills = obj.getInt("dragonKills");
 			stat.baronKills = obj.getInt("baronKills");
 			stat.teamId = obj.getInt("teamId");
-			
-			boolean blue = true;
-			if (stat.teamId == Player.RED)
-				blue = false;
 
-			if (blue) {
-				if (obj.getBoolean("firstBlood")) {
-					
-				}
-				stat.firstBlood = obj.getBoolean("firstBlood");
-				stat.firstBaron = obj.getBoolean("firstBaron");
-				stat.firstDragon = obj.getBoolean("firstDragon");
-				stat.firstInhibitor = obj.getBoolean("firstInhibitor");
-				stat.firstTower = obj.getBoolean("firstTower");
-				stat.firstRiftHerald = obj.getBoolean("firstRiftHerald");
+			stat.firstBlood = obj.getBoolean("firstBlood");
+			stat.firstBaron = obj.getBoolean("firstBaron");
+			stat.firstDragon = obj.getBoolean("firstDragon");
+			stat.firstInhibitor = obj.getBoolean("firstInhibitor");
+			stat.firstTower = obj.getBoolean("firstTower");
+			stat.firstRiftHerald = obj.getBoolean("firstRiftHerald");
 
-				if (obj.getString("win").equals("Win")) {
-					stat.win = true;
-				} else {
-					stat.win = false;
-				}
+			if (obj.getString("win").equals("Win")) {
+				stat.win = true;
+			} else {
+				stat.win = false;
 			}
 
 			if (obj.getInt("teamId") == Player.BLUE) { // BLUE
