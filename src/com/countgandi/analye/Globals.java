@@ -18,7 +18,7 @@ public class Globals {
 	
 	public static Champion[] CHAMPIONS;
 	
-	public static final String API_KEY = "RGAPI-6953a9c7-e686-4d5f-b3e8-7d8ce1a9f489";
+	public static final String API_KEY = "RGAPI-e7e041c0-9d7f-455e-895a-06fcb3352ae3";
 	public static final String ROUTING_VALUE = ".api.riotgames.com";
 	public static String REGION = "na1";
 	

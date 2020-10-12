@@ -14,12 +14,11 @@ public class TeamStats {
 	public int riftHeraldKills;
 	@NameAnnotation(name = "Dragon Kills")
 	public int dragonKills;
-	@NameAnnotation(name = "Baron Kills")
+	@NameAnnotation(name = "Baron Kills", space = true)
 	public int baronKills;
 	
 	public int teamId;
 	
-	@NameAnnotation(name = "Win", space = true)
 	public boolean win;
 	
 	@NameAnnotation(name = "First Blood")
@@ -32,7 +31,7 @@ public class TeamStats {
 	public boolean firstRiftHerald;
 	@NameAnnotation(name = "First Dragon")
 	public boolean firstDragon;
-	@NameAnnotation(name = "First Baron", space = true)
+	@NameAnnotation(name = "First Baron")
 	public boolean firstBaron;
 	
 }

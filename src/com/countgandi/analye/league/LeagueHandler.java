@@ -43,7 +43,7 @@ public class LeagueHandler {
 		match.gameMode = data.getString("gameMode");
 
 		JSONArray teamArray = data.getJSONArray("teams");
-		System.out.println(teamArray);
+		
 		for (int i = 0; i < 2; i++) {
 			JSONObject obj = teamArray.getJSONObject(i);
 			TeamStats stat = new TeamStats();
@@ -182,8 +182,10 @@ public class LeagueHandler {
 		ArrayList<MatchFrame> frames = new ArrayList<MatchFrame>();
 		JSONObject time = new JSONObject(readDataFromLeague("/lol/match/v4/timelines/by-match/" + m.gameId));
 		JSONArray line = time.getJSONArray("frames");
+		System.out.println(" adfgad" + time);
 		for (int i = 0; i < line.length(); i++) {
 			MatchFrame frame = new MatchFrame();
+			
 		}
 
 		return frames;
@@ -224,10 +226,9 @@ public class LeagueHandler {
 	private static String readDataFromLeague(String url, String extra) {
 		String data = "";
 		try {
-			URL line = new URL(
-					"https://" + Globals.REGION + Globals.ROUTING_VALUE + url + "?api_key=" + Globals.API_KEY + extra);
-			// RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(30 *
-			// 1000).build();
+			String completeURL = "https://" + Globals.REGION + Globals.ROUTING_VALUE + url + "?api_key=" + Globals.API_KEY + extra;
+			URL line = new URL(completeURL);
+			System.out.println("Request to: " + completeURL);
 			HttpURLConnection con = (HttpURLConnection) line.openConnection();
 
 			if (con.getResponseCode() != HttpURLConnection.HTTP_OK) {
